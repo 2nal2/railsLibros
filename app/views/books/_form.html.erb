@@ -11,14 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Tittle</span>
+    <input name="book[title]"  id="book_title" type="text" class="form-control"
+    placeholder="Title" aria-describedby="basic-addon1">
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Author</span>
+    <input name="book[author]"  id="book_author" type="text" class="form-control"
+    placeholder="Author" aria-describedby="basic-addon1">
   </div>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
