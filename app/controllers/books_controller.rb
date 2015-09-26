@@ -4,6 +4,9 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
+    book_counter = Book.count(:id)
+    # @number_book = (book_counter.empty)? 'empty Value': book_counter.to_s
+    @number_book = 'Cantidad de resgistros ' +book_counter.to_s
     @books = Book.all
   end
 
