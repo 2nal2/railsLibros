@@ -14,5 +14,32 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
 //= require bootstrap-sprockets
+
+// Funcion para ejecutar un submit al escribir en el input del formulario
+// $(document).ready(function(){
+//    $("#q").keyup(function(event){
+//      document.all["formsearch"].submit();
+//    });
+//  });
+
+ $(document).ready(
+   function(){
+
+     //Funcion que al presionar en el input del formulario de busqueda ejecute el submit del formulario sin
+     //recargar la pagina
+     $("#q").keyup(function(event) {
+        $.get($("#formsearch").attr("action"), $("#formsearch").serialize(), null, "script");
+        return false;
+      });
+
+    //Funcion que al ejecutar el submit no recarge la pagina y realize su trabajo
+     $("#formsearch").submit(
+      function(){
+        $.get(this.action , $(this).serialize() , null, "script");
+        return false;
+     }
+     );
+
+     }
+ );

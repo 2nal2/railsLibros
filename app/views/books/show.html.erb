@@ -4,21 +4,27 @@
 <div class="alert alert-success" role="alert" id ='notice'><%= notice %></div>
 
 <% end %>
+<div class = 'container col-md-6' style="margin-left: 10%;">
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+  <div class="alert alert-info" role="alert">
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <p>
+      <strong>Author:</strong>
+      <%= @book.author %>
+    </p>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <p>
+      <strong>Description:</strong>
+      <%= @book.description %>
+    </p>
+  </div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+  <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %> |
+  <%= link_to 'Back', books_path , class: 'btn btn-default'%>
+</div>

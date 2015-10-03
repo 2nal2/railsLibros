@@ -1,0 +1,6 @@
+es:
+  book:
+    title: 'Título'
+    author : "Autor"
+    description: "Descripción"
+  save : "Guardar"

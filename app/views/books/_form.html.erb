@@ -13,23 +13,29 @@
 
   <br>
   <div class="input-group">
-    <span class="input-group-addon" id="basic-addon1">Tittle</span>
-    <input name="book[title]"  id="book_title" type="text" class="form-control"
-    placeholder="Title" aria-describedby="basic-addon1">
+    <%= f.label t('book.title'), class:'input-group-addon' %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Tittle of the book" %>
   </div>
 
   <br>
+
   <div class="input-group">
-    <span class="input-group-addon" id="basic-addon1">Author</span>
-    <input name="book[author]"  id="book_author" type="text" class="form-control"
-    placeholder="Author" aria-describedby="basic-addon1">
+    <%= f.label t('book.author'), class:'input-group-addon' %>
+    <%= f.text_field :author, class: "form-control", placeholder: "Author" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <br>
+
+  <div class="input-group">
+    <%= f.label t('book.description'), class:'input-group-addon' %>
+    <%= f.text_area :description, class: "form-control", placeholder: "a brief description of the book" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <br>
+
+  <div class="pull-right">
+    <%= link_to 'Back', books_path, class: 'btn btn-default' %>
+    <%= f.submit t(:save) ,class: 'btn btn-success' %>
+
   </div>
 <% end %>
