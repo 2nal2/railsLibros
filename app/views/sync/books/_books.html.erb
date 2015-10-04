@@ -1,0 +1,27 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+
+    <div class="panel-heading" role="tab" id=<%= "heading#{book.id}" %>>
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href=<%= "#collapse#{book.id}" %>
+          aria-expanded="true" aria-controls="collapseOne">
+          <%= book.title %> by <%= book.author%>
+        </a>
+      </h4>
+    </div>
+
+
+    <div id= <%= "collapse#{book.id}" %> class="panel-collapse collapse in" role="tabpanel" aria-labelledby= <%= "heading#{book.id}" %>>
+          <div class="panel-body">
+            <p><%= book.description %></p>
+            <div class = "pull-right">
+
+              <%= link_to 'Show', book , class: 'btn btn-primary'%>
+              <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-warning' %>
+              <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>

@@ -35,10 +35,15 @@ gem 'bootstrap-sass', '~> 3.3.5'
 # gem 'capistrano-rails', group: :development
 
 # Use for Freindly_id
-gem 'friendly_id', '~> 5.1.0' 
+gem 'friendly_id', '~> 5.1.0'
 # Use for Paginate
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+
+#use for Asynch with the page
+gem 'sync', '~> 0.3.5'
+gem 'faye'
+gem 'thin', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
